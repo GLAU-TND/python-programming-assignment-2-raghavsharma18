@@ -1,0 +1,13 @@
+q=eval(input())
+b=[min(t)]
+a=min(t)[-1]
+q.remove(min(t))
+for i in q:
+    for j in q:
+        if a==j[0] and j[-1]!=b[0][0]:
+            b.append(j)
+            a=j[-1]
+            q.remove(j)
+            break
+b=b+q
+print(b)
