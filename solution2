@@ -1,0 +1,12 @@
+r=eval(input())
+r=[str(i) for i in t]
+r.sort()
+b=''
+for i in range(len(r)-1):
+    if r[i][0]==r[i+1][0] and len(r[i])<len(r[i+1]):
+        a=r[i]
+        r[i]=r[i+1]
+        r[i+1]=a
+for i in range(len(r)-1,-1,-1):
+    b=b+r[i]
+print(int(b))
